@@ -6,11 +6,7 @@
     <title>Title</title>
 </head>
 <body>
-<form action="" method="get">
-    {{ filter.form.as_p }}
-    <input type="submit"/>
-</form>
-{% for obj in filter.qs %}
+{% for obj in results %}
     {{ obj.name }} - ${{ obj.price }}<br/>
 {% endfor %}
 </body>
