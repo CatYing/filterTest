@@ -7,9 +7,9 @@
 更正
 ---
 
-从django.apps 中import apps
-使用apps.get_app_config()方法获取AppConfig实例
-使用该实例的get_model方法
+* 从django.apps 中import apps
+* 使用apps.get_app_config()方法获取AppConfig实例
+* 使用该实例的get_model方法
 
 
 ---
