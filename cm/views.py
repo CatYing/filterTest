@@ -1,8 +1,9 @@
 from django.shortcuts import render
-from model_filter import *
+from django.apps import apps
 # Create your views here.
 
 
 def product_list(request):
-    f = ProductFilter(request.GET, queryset=Product.objects.all())
-    return render(request, 'test.html', {'filter': f})
+    my_app_config = apps.get_app_config('cm')
+    product_list = my_app_config.get_model("Product").objects.all()
+    return render(request, 'test.html', {'product_list': product_list})
